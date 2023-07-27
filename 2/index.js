@@ -47,4 +47,12 @@ let classObj = {
             ]
         }
     ]
-}    
+}
+
+// -----------------------------------------
+//2. Write a function to print the teacher's name: "Mary".
+
+function findClassTeacherName(classObj){
+    return classObj.teacherName
+}
+console.log(findClassTeacherName(classObj));        
