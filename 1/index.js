@@ -48,3 +48,10 @@ let classObj = {
         }
     ]
 }    
+    // -----------------------------------------
+//1. Write a function to print the name of the class: "class A".
+
+function findClassName(classObj){
+    return classObj.name
+}
+console.log(findClassName(classObj));       
