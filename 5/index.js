@@ -48,3 +48,14 @@ let classObj = {
         }
     ]
 }    
+// Write a function to print the subject names for a specific student.
+function subjectNamesForStudent(studentName,classObj){
+    const studentDetails = classObj.students.find((item) => {
+        return item.name === studentName
+    })   
+    const subjects = studentDetails.marks.map((item) => {
+        return item.subject
+    })
+    return subjects
+}
+console.log(subjectNamesForStudent("Ravi",classObj));
