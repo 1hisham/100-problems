@@ -48,3 +48,12 @@ let classObj = {
         }
     ]
 }    
+// -----------------------------------------
+// Write a function to print the marks of a specific student in all subjects.
+
+function MarksForStudent(studentName, classObj){
+    const studentDetails = classObj.students.find((item) => item.name == studentName)
+    const studentMarkDetails = studentDetails.marks.map((item) => item.mark)
+    return studentMarkDetails
+}
+console.log(MarksForStudent("Aju", classObj));
