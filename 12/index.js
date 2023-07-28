@@ -48,29 +48,3 @@ let classObj = {
     },
   ],
 };
-// Write a function to find and print the student with the highest total marks.
-
-function studentWithHighestMark(classObj) {
-  const studentHighestMark = []
-  let higestMark = 0;
-  classObj.students.forEach((student) => {
-    let totalMark = 0;
-    student.marks.forEach((items) => {
-        totalMark += items.mark
-    });
-    if(totalMark > higestMark){
-        higestMark = totalMark
-    }
-  });
-  classObj.students.forEach((student) => {
-    let totalMark = 0;
-    student.marks.forEach((items) => {
-        totalMark += items.mark
-    });
-    if(totalMark === higestMark){
-        studentHighestMark.push(student.name)
-    }
-  });
-  return studentHighestMark
-}
-console.log(studentWithHighestMark(classObj));
