@@ -48,3 +48,16 @@ let classObj = {
         }
     ]
 }    
+// Write a function to calculate and print the average marks for a specific student.
+
+function averageMarkOfStudent(studentName, classObj){
+    let  totalMark = 0;
+    let  totalSubject = 5;
+    const studentDetails = classObj.students.find(item => item.name === studentName)
+    studentDetails.marks.forEach((item) => {
+        totalMark += item.mark  
+    })
+    let averageMark = totalMark/totalSubject
+    return averageMark
+}
+console.log(averageMarkOfStudent("Binu", classObj));
