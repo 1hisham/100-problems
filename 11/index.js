@@ -74,3 +74,29 @@ function studentWithHighstMarkInSubject(subject, classObj) {
   return studentName;
 }
 console.log(studentWithHighstMarkInSubject("Maths", classObj));
+//Write a function to find and print the student with the lowest marks in a specific subject.
+function studentWithLowestMarkInSubject(subject, classObj) {
+    let studentLowestMark = 50;
+    let studentName = [];
+    classObj.students.forEach((student) => {
+      student.marks.forEach((item) => {
+        if (item.subject === subject) {
+          if (item.mark < studentLowestMark) {
+            studentLowestMark = item.mark;
+          }
+        }
+      });
+    });
+    classObj.students.forEach((student) => {
+      student.marks.forEach((item) => {
+        if (item.subject === subject) {
+          if (item.mark === studentLowestMark) {
+            studentName.push(student.name)
+          }
+        }
+      });
+    });
+  
+    return studentName;
+  }
+  console.log(studentWithLowestMarkInSubject("Computer", classObj));
