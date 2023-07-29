@@ -48,3 +48,12 @@ let classObj = {
         }
     ]
 }    
+// -----------------------------------------
+//3. Write a function to print the names of all the students in the class.
+
+function AllTheStudentInClass(classObj){
+    return classObj.students.map((items)=>{
+        return items.name
+    })
+}
+console.log(AllTheStudentInClass(classObj));
