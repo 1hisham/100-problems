@@ -48,3 +48,12 @@ let classObj = {
         }
     ]
 }    
+//4. Write a function to print the IDs of all the students in the class.
+
+function studentsId(classObj){
+    return classObj.students.map((item)=> {
+        return item.id
+    })
+}
+console.log(studentsId(classObj));
+
