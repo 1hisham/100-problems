@@ -48,3 +48,31 @@ let classObj = {
         }
     ]
 }    
+// 14. Write a function to find and print the student with the lowest total marks.
+
+function studentWithLowestMark(classObj) {
+    const studentLowestMark = []
+    let lowestMark = 250;
+    classObj.students.forEach((student) => {
+      let totalMark = 0;
+      student.marks.forEach((items) => {
+          totalMark += items.mark
+      });
+      if(totalMark < lowestMark){
+          lowestMark = totalMark
+      }
+    });
+    classObj.students.forEach((student) => {
+      let totalMark = 0;
+      student.marks.forEach((items) => {
+          totalMark += items.mark
+      });
+      if(totalMark === lowestMark){
+          studentLowestMark.push(student.name)
+      }
+    });
+    return studentLowestMark
+  }
+  
+  console.log(studentWithLowestMark(classObj));
+  
