@@ -61,6 +61,7 @@ function studentWithHighstMarkInSubject(subject, classObj) {
       }
     });
   });
+  
   classObj.students.forEach((student) => {
     student.marks.forEach((item) => {
       if (item.subject === subject) {
@@ -87,6 +88,8 @@ function studentWithLowestMarkInSubject(subject, classObj) {
         }
       });
     });
+
+
     classObj.students.forEach((student) => {
       student.marks.forEach((item) => {
         if (item.subject === subject) {
